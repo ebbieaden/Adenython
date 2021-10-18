@@ -43,11 +43,11 @@ class LinkedQueue:
         self.rear: Optional[Node] = None
 
     def is_empty(self) -> bool:
-        """ returns boolean describing if queue is empty """
+        """returns boolean describing if queue is empty"""
         return self.front is None
 
     def put(self, item: Any) -> None:
-        """ append item to rear of queue """
+        """append item to rear of queue"""
         node: Node = Node(item)
         if self.is_empty():
             # the queue contains just the single element
@@ -60,7 +60,7 @@ class LinkedQueue:
             self.rear = node
 
     def get(self) -> Any:
-        """ returns and removes item at front of queue """
+        """returns and removes item at front of queue"""
         if self.is_empty():
             raise IndexError("get from empty queue")
         else:

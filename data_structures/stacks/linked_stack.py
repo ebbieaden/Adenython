@@ -42,11 +42,11 @@ class LinkedStack:
         self.top: Optional[Node] = None
 
     def is_empty(self) -> bool:
-        """ returns boolean describing if stack is empty """
+        """returns boolean describing if stack is empty"""
         return self.top is None
 
     def push(self, item: Any) -> None:
-        """ append item to top of stack """
+        """append item to top of stack"""
         node: Node = Node(item)
         if self.is_empty():
             self.top = node
@@ -56,7 +56,7 @@ class LinkedStack:
             self.top = node
 
     def pop(self) -> Any:
-        """ returns and removes item at top of stack """
+        """returns and removes item at top of stack"""
         if self.is_empty():
             raise IndexError("pop from empty stack")
         else:

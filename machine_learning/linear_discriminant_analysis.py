@@ -155,7 +155,7 @@ def calculate_variance(items: list, means: list, total_count: int) -> float:
 def predict_y_values(
     x_items: list, means: list, variance: float, probabilities: list
 ) -> list:
-    """ This function predicts new indexes(groups for our data)
+    """This function predicts new indexes(groups for our data)
     :param x_items: a list containing all items(gaussian distribution of all classes)
     :param means: a list containing real mean values of each class
     :param variance: calculated value of variance by calculate_variance function
@@ -249,7 +249,7 @@ def accuracy(actual_y: list, predicted_y: list) -> float:
 
 # Main Function
 def main():
-    """ This function starts execution phase """
+    """This function starts execution phase"""
     while True:
         print(" Linear Discriminant Analysis ".center(50, "*"))
         print("*" * 50, "\n")
