@@ -6,7 +6,7 @@ from cv2 import imread, imshow, waitKey, destroyAllWindows
 
 
 def make_sepia(img, factor: int):
-    """ Function create sepia tone. Source: https://en.wikipedia.org/wiki/Sepia_(color) """
+    """Function create sepia tone. Source: https://en.wikipedia.org/wiki/Sepia_(color)"""
     pixel_h, pixel_v = img.shape[0], img.shape[1]
 
     def to_grayscale(blue, green, red):
@@ -17,7 +17,7 @@ def make_sepia(img, factor: int):
         return 0.2126 * red + 0.587 * green + 0.114 * blue
 
     def normalize(value):
-        """ Helper function to normalize R/G/B value -> return 255 if value > 255"""
+        """Helper function to normalize R/G/B value -> return 255 if value > 255"""
         return min(value, 255)
 
     for i in range(pixel_h):
